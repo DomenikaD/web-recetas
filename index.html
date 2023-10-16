@@ -4,8 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECETAS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Inicio de Sesión</h2>
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" required><br><br>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required><br><br>
+                <button type="button" id="login-button">Iniciar Sesión</button>
+            </form>
+            <p id="login-success">Sesión iniciada</p>
+            <button type="button" id="close-button">Cerrar Formulario</button>
+        </div>
+    </div>
+
+
+<section class="encabezado">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <div class="sesion">
+                <a href="#" id="open-modal"><p>Iniciar sesión</p></a>
+            </div>
+        </div>
+        <ul class="navbar">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#Nosotros">Nosotros</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </div>
+</section>
+<section class="cuerpo">
+    <div class="container">
+        <div class="izq">
+            <img class="imagen" src="1img.jpg" alt="">
+        </div>
+        <div class="der">
+            <h1>INICIO</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+        </div>
+        <div class="der">
+            <h1 id="Nosotros">NOSOTROS</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+        </div>
+        <div class="izq">
+            <img class="imagen" src="2img.jpg" alt="">
+        </div>  
+    </div>
+</section>
+
+<footer class="pie">
+    <div class="contenedorpie">
+        <div class="pieseccion">
+            <h3 id="Contacto">Información de Contacto</h3>
+            <br>
+            <p><strong>Dirección:</strong> Calle Principal, Ciudad</p>
+            <p><strong>Teléfono:</strong> (123) 456-7890</p>
+            <p><strong>Correo electrónico:</strong> info@example.com</p>
+        </div>
+        <div class="pieseccion">
+            <h3>Enlaces Útiles</h3>
+            <br>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="pieseccion">
+            <h3>Síguenos en las Redes Sociales</h3>
+            <br>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+    </div>
+
     
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
 </html>
