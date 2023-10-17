@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECETAS</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="recetas.css">
 </head>
 <body>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>CREAR RECETA</h2>
+            <form id="login-form">
+                
+                <label for="recipe-name">Nombre de la Receta:</label>
+                <input type="text" id="recipe-name" required><br><br>
+    
+                <label for="ingredients">Ingredientes:</label>
+                <textarea id="ingredients" rows="4" cols="50" required></textarea><br><br>
+    
+                <label for="instructions">Pasos:</label>
+                <textarea id="instructions" rows="4" cols="50" required></textarea><br><br>
+    
+                <label for="author">Autor:</label>
+                <input type="text" id="author" required><br><br>
+    
+                <button type="button" id="add-button">Añadir</button>
+            </form>
+
+            <button type="button" id="close-button">Cerrar Formulario</button>
+        </div>
+    </div>
+
 
 <section class="encabezado">
     <div class="navbar">
@@ -28,40 +54,19 @@
 <section class="banner">
     <div class="banner-content">
         <div class="banner-text">
-            <h2>Organic Dish</h2>
-            <p>Organic Dish es una página web en la que puedes compartir tus recetas de cocina.</p>
-            <br>
-            <div class="btncompartir">
-                <a href="">Compartir</a>
-            </div>
-            <!-- Puedes agregar más texto si es necesario -->
-        </div>
-        <div class="banner-image">
-            <img class="bannerimg" src="banletras.png" alt="Imagen del banner">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar">
+                <button id="search-button">Buscar</button>
+            </div>            
         </div>
     </div>
 </section>
 
 
 <section class="cuerpo">
-    <div class="container">
-        <div class="izq">
-            <img class="imagen" src="1img.jpg" alt="">
-        </div>
-        <div class="der">
-            <h1>RECETAS</h1>
-            <br>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-        </div>
-        <div class="der">
-            <h1 id="Nosotros">NOSOTROS</h1>
-            <br>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-        </div>
-        <div class="izq">
-            <img class="imagen" src="2img.jpg" alt="">
-        </div>  
-    </div>
+
+    <div id="recipes-container"></div>
+    
 </section>
 
 <footer class="pie">
@@ -77,9 +82,9 @@
             <h3>Enlaces Útiles</h3>
             <br>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+                <li><a href="recetas.html">Recetas</a></li>
             </ul>
         </div>
         <div class="pieseccion">
@@ -97,6 +102,7 @@
 
 
 <script src="script.js"></script>
+<script src="recetas.js"></script>
 
 
 </body>

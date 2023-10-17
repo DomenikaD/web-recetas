@@ -124,16 +124,18 @@ ul.navbar li a:hover {
 
  /* Estilos para la ventana emergente */
  .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        align-items: center;
-        justify-content: center;
-    }
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    z-index: 1;
+}
 
     .modal-content {
         background-color: white;
@@ -210,6 +212,37 @@ ul.navbar li a:hover {
     color: #452a1b;
     font-size: 18px;
 }
+
+
+/* ESTILOS DE EL BUSCADOR*/
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+
 
 /* Estilos para hacerlo responsive (ajustable a diferentes tamaños de pantalla) */
 @media (max-width: 768px) {
