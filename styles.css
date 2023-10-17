@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .encabezado{
-    
+    background-color: whitesmoke;
 }
 .logo{
     display: flex;  
@@ -25,11 +25,20 @@
 .cuerpo{
     
 }
-.container{
+.caseras{
     display: grid;
     justify-content: center;
     grid-template-columns: 50% 50%;
     padding: 30px;
+    background-color: #fad598;
+
+}
+.tipicas{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    padding: 30px;
+    background-color: whitesmoke;
 
 }
 p{
@@ -45,16 +54,21 @@ p{
     margin-bottom: 50px;
 }
 .izq img{
-    width: 90%;
+    width: 75%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
 }
+.izq img:hover{
+    transform: scale(1.1);
+}
+
 .der{
     text-align: justify;
     margin-bottom: 30px;
     padding: 50px;
 }
 .pie{
-   background-color: #333;
+   background-color: #452a1b;
    color: white;
 }
 .contenedorpie{
@@ -82,7 +96,7 @@ ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: whitesmoke;
     overflow: hidden;
 }
 
@@ -93,15 +107,17 @@ ul.navbar li {
 
 ul.navbar li a {
     display: block;
-    color: white;
+    color: #452a1b;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 ul.navbar li a:hover {
     background-color: #ddd;
     color: black;
+    border-radius: 20px;
 }
 
 
@@ -136,3 +152,77 @@ ul.navbar li a:hover {
         color: green;
         font-weight: bold;
     }
+
+
+
+
+    /* Estilos para la nueva sección del banner */
+.banner {
+    background-image: url('cebolladesenfoque.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor sin repetirla */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    background-position: center; /* Centra la imagen */
+    padding: 40px;
+    color: white; /* Cambia el color del texto si es necesario */
+}
+
+.banner-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-text h2 {
+    font-size: 34px;
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    color: white; /* Color del texto secundario */
+}
+
+.banner-image img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    border-radius: 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btncompartir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #11915d;
+    color: #452a1b;
+    padding: 10px;
+    border-radius: 20px;
+    width: 20%;
+}
+
+.btncompartir a {
+    text-decoration: none;
+    color: #452a1b;
+    font-size: 18px;
+}
+
+/* Estilos para hacerlo responsive (ajustable a diferentes tamaños de pantalla) */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column; /* Cambia el diseño a apilado en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .banner-text h2 {
+        font-size: 20px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+}
