@@ -1,0 +1,19 @@
+    /* Estilos para la nueva sección del banner */
+    .bannernosotros {
+        background-image: url('cebolladesenfoque.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
+        background-size: cover; /* Ajusta la imagen al tamaño del contenedor sin repetirla */
+        background-repeat: no-repeat; /* Evita que se repita la imagen */
+        background-position: center; /* Centra la imagen */
+        padding: 40px;
+        color: #452a1b; ; /* Cambia el color del texto si es necesario */
+        font-size: 24px;
+    }
+    
+    .bannernosotros-content {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+   

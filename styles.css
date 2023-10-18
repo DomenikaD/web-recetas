@@ -68,7 +68,7 @@ p{
     padding: 50px;
 }
 .pie{
-   background-color: #452a1b;
+   background-color: #11915d;
    color: white;
 }
 .contenedorpie{
@@ -277,10 +277,13 @@ ul.navbar li a:hover {
 .sesion{
     background-color: #11915d;
     padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
 }
 
 .sesion a{
     text-decoration: none;
+    color:white;
 }
 
 
