@@ -16,4 +16,24 @@
         justify-content: space-between;
     }
     
-   
+    .bannernosotros-text {
+        flex: 1;
+    }
+    
+    .bannernosotros-text h2 {
+        font-size: 34px;
+        color: #333; /* Color del texto */
+        margin-bottom: 10px;
+    }
+    
+    .bannernosotros-text p {
+        font-size: 18px;
+        color: #452a1b; /* Color del texto secundario */
+        font-size: 20px;
+    }
+    
+    .bannernosotros-image img {
+        max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        border-radius: 100px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
