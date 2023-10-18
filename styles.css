@@ -133,29 +133,53 @@ ul.navbar li a:hover {
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 80%;
+    max-width: 100%;
     z-index: 1;
 }
 
     .modal-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
+       display: grid;
+       grid-template-columns: 90%;
+       align-items: center;
+       justify-content: center;
     }
 
     /* Estilos para el formulario */
     #login-form {
         text-align: center;
+        display:grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+
+    }
+    #login-form input[type="text"],
+    #login-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
-    /* Estilos para el mensaje de inicio de sesión */
-    #login-success {
-        display: none;
-        color: green;
+    #login-form button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
         font-weight: bold;
     }
-
-
+    #close-button{
+        background-color: #c02f2a;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+    }
 
 
     /* Estilos para la nueva sección del banner */
@@ -211,13 +235,20 @@ ul.navbar li a:hover {
     text-decoration: none;
     color: #452a1b;
     font-size: 18px;
+    transition: 0.2s;
+}
+.btncompartir a:hover {
+    text-decoration: none;
+    color: #452a1b;
+    font-size: 20px;
 }
 
 
 /* ESTILOS DE EL BUSCADOR*/
 .search-container {
-    text-align: center;
+    text-align: left;
     margin: 20px;
+    width: 100%;
 }
 
 #search-input {
@@ -226,6 +257,7 @@ ul.navbar li a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    width: 70%;
 }
 
 #search-button {

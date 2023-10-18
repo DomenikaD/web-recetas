@@ -20,7 +20,27 @@ function displayRecipes() {
         const recipeElement = document.createElement("div");
         recipeElement.classList.add("recipe-card");
         recipeElement.innerHTML = `
-            <h3>${recipe.name}</h3>
+            <h2>${recipe.name}</h2>
+            <p><strong>Ingredientes:</strong> ${recipe.ingredients}</p>
+            <p><strong>Pasos:</strong> ${recipe.instructions}</p>
+            <p><strong>Autor:</strong> ${recipe.author}</p>
+        `;
+
+        recipesContainer.appendChild(recipeElement);
+    });
+    
+}
+
+// Función para mostrar recetas en pantalla
+function displayRecipesSearch(recipes) {
+    const recipesContainer = document.getElementById("recipes-container");
+    recipesContainer.innerHTML = "";
+
+    recipes.forEach((recipe, index) => {
+        const recipeElement = document.createElement("div");
+        recipeElement.classList.add("recipe-card");
+        recipeElement.innerHTML = `
+            <h2>${recipe.name}</h2>
             <p><strong>Ingredientes:</strong> ${recipe.ingredients}</p>
             <p><strong>Pasos:</strong> ${recipe.instructions}</p>
             <p><strong>Autor:</strong> ${recipe.author}</p>
