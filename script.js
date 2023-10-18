@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const ingredients = document.getElementById("ingredients").value;
         const instructions = document.getElementById("instructions").value;
         const author = document.getElementById("author").value;
+        const recipeImageInput = document.getElementById("recipe-image");
 
 
         if (recipeName === '' || ingredients === '' || instructions === '' || author === '') {
@@ -28,29 +29,41 @@ document.addEventListener("DOMContentLoaded", function () {
     
             // Detén el envío del formulario
         }else{
-            // Guarda los datos en el localStorage con una clave única
-            const recipeKey = `recipe_${Date.now()}`;
-            const recipeData = {
-                name: recipeName,
-                ingredients: ingredients,
-                instructions: instructions,
-                author: author,
+
+            if (recipeImageInput.files.length === 0) {
+                alert('Por favor, seleccione una imagen.');
+            } else {
+
+                const imageFile = recipeImageInput.files[0];
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageData = e.target.result;
+
+                // Guarda los datos en el localStorage con una clave única
+                const recipeKey = `recipe_${Date.now()}`;
+                const recipeData = {
+                    name: recipeName,
+                    ingredients: ingredients,
+                    instructions: instructions,
+                    author: author,
+                    image: imageData,
+                };
+
+                localStorage.setItem(recipeKey, JSON.stringify(recipeData));
+
+                // Limpia los campos después de guardar
+                //recipeForm.reset();
+
+                // Puedes realizar alguna acción adicional aquí, como mostrar un mensaje de éxito.
+                // También puedes actualizar una lista de recetas guardadas en la página.
+                displayRecipes();
+                alert("Receta guardada exitosamente.");
+
+                loginModal.style.display = "none";
             };
-
-            localStorage.setItem(recipeKey, JSON.stringify(recipeData));
-
-            // Limpia los campos después de guardar
-            //recipeForm.reset();
-
-            // Puedes realizar alguna acción adicional aquí, como mostrar un mensaje de éxito.
-            // También puedes actualizar una lista de recetas guardadas en la página.
-            displayRecipes();
-            alert("Receta guardada exitosamente.");
-
-            loginModal.style.display = "none";
+            reader.readAsDataURL(imageFile);
         }
-
-        
+    }   
     });
 
     searchButton.addEventListener("click", function () {

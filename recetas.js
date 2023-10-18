@@ -24,6 +24,7 @@ function displayRecipes() {
             <p><strong>Ingredientes:</strong> ${recipe.ingredients}</p>
             <p><strong>Pasos:</strong> ${recipe.instructions}</p>
             <p><strong>Autor:</strong> ${recipe.author}</p>
+            <img src="${recipe.image}" alt="${recipe.name}">
         `;
 
         recipesContainer.appendChild(recipeElement);
