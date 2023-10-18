@@ -274,6 +274,15 @@ ul.navbar li a:hover {
     background-color: #0056b3;
 }
 
+.sesion{
+    background-color: #11915d;
+    padding: 10px;
+}
+
+.sesion a{
+    text-decoration: none;
+}
+
 
 
 /* Estilos para hacerlo responsive (ajustable a diferentes tamaños de pantalla) */
