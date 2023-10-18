@@ -21,26 +21,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const instructions = document.getElementById("instructions").value;
         const author = document.getElementById("author").value;
 
-        // Guarda los datos en el localStorage con una clave única
-        const recipeKey = `recipe_${Date.now()}`;
-        const recipeData = {
-            name: recipeName,
-            ingredients: ingredients,
-            instructions: instructions,
-            author: author,
-        };
 
-        localStorage.setItem(recipeKey, JSON.stringify(recipeData));
+        if (recipeName === '' || ingredients === '' || instructions === '' || author === '') {
+            // Muestra un mensaje de error
+            alert('Por favor, complete todos los campos.');
+    
+            // Detén el envío del formulario
+        }else{
+            // Guarda los datos en el localStorage con una clave única
+            const recipeKey = `recipe_${Date.now()}`;
+            const recipeData = {
+                name: recipeName,
+                ingredients: ingredients,
+                instructions: instructions,
+                author: author,
+            };
 
-        // Limpia los campos después de guardar
-        //recipeForm.reset();
+            localStorage.setItem(recipeKey, JSON.stringify(recipeData));
 
-        // Puedes realizar alguna acción adicional aquí, como mostrar un mensaje de éxito.
-        // También puedes actualizar una lista de recetas guardadas en la página.
-        displayRecipes();
-        alert("Receta guardada exitosamente.");
+            // Limpia los campos después de guardar
+            //recipeForm.reset();
 
-        loginModal.style.display = "none";
+            // Puedes realizar alguna acción adicional aquí, como mostrar un mensaje de éxito.
+            // También puedes actualizar una lista de recetas guardadas en la página.
+            displayRecipes();
+            alert("Receta guardada exitosamente.");
+
+            loginModal.style.display = "none";
+        }
+
+        
     });
 
     searchButton.addEventListener("click", function () {
