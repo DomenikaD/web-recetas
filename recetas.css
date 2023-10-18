@@ -12,6 +12,13 @@
     text-align: justify;
 }
 
+.recipe-card img {
+    max-width: 40%; /* Ajusta el ancho máximo de la imagen para que se adapte al contenedor */
+    border: 2px solid #ccc; /* Agrega un borde de 2 píxeles sólido con color gris claro */
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra con desplazamiento de 4px en ambas direcciones y opacidad del 20% */
+}
+
 .recipe-card h3 {
     font-size: 20px;
     margin: 5px 0;

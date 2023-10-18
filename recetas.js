@@ -21,10 +21,11 @@ function displayRecipes() {
         recipeElement.classList.add("recipe-card");
         recipeElement.innerHTML = `
             <h2>${recipe.name}</h2>
+            <img src="${recipe.image}" alt="${recipe.name}">
             <p><strong>Ingredientes:</strong> ${recipe.ingredients}</p>
             <p><strong>Pasos:</strong> ${recipe.instructions}</p>
             <p><strong>Autor:</strong> ${recipe.author}</p>
-            <img src="${recipe.image}" alt="${recipe.name}">
+            
         `;
 
         recipesContainer.appendChild(recipeElement);
@@ -42,6 +43,7 @@ function displayRecipesSearch(recipes) {
         recipeElement.classList.add("recipe-card");
         recipeElement.innerHTML = `
             <h2>${recipe.name}</h2>
+            <img src="${recipe.image}" alt="${recipe.name}">
             <p><strong>Ingredientes:</strong> ${recipe.ingredients}</p>
             <p><strong>Pasos:</strong> ${recipe.instructions}</p>
             <p><strong>Autor:</strong> ${recipe.author}</p>
