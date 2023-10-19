@@ -301,4 +301,51 @@ ul.navbar li a:hover {
     .banner-text p {
         font-size: 16px;
     }
+
+    .caseras{
+        font-size: 16px;
+        grid-template-columns: 100%;
+    }
+    .tipicas{
+        font-size: 16px;
+        grid-template-columns: 100%;
+    
+    }
+    p{
+        font-size: 12px;
+    }
+
+    ul.navbar li a {
+        
+        font-size: 14px;
+    }
+
+    .contenedorpie{
+        display: grid;
+        grid-template-columns: 100% ;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .banner-content {
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img{
+        width: 50%;
+    }
+
+    .btncompartir {
+        margin-left: 120px;
+        margin-bottom: 20px;
+    }
+    
+    .btncompartir a {
+    
+        font-size: 14px;
+        
+    }
 }
